@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <cassert>
-
 #include "vector.hpp"
 
 vector_t::vector_t()
@@ -41,7 +40,7 @@ bool vector_t::operator ==(vector_t const & other) const
   if(size_!=other.size()){
 	return false;
 }
-for(int i=0;i<other.size();i++){
+  for(int i=0;i<other.size();i++){
     if(elements_[i]!=other.elements_[i]){
       result=false;
       return result;
@@ -91,7 +90,6 @@ void vector_t::push_back(int value)
      else{
       elements_[size_-1]=value;
      }
-
 }
 
 void vector_t::pop_back()
@@ -112,7 +110,6 @@ void vector_t::pop_back()
             delete[] elements_; 
         }
       elements_=elements;
-
      }
 }
 
@@ -132,12 +129,11 @@ bool operator !=(vector_t const & lhs, vector_t const & rhs)
   if(rhs.size()!=lhs.size()){
 	return true;
 }
-for(int i=0;i<rhs.size();i++){
+  for(int i=0;i<rhs.size();i++){
     if(lhs.elements_[i]!=rhs.elements_[i]){
       result=true;
       return result;
     }
   }
-
   return result;
 }
