@@ -1,6 +1,5 @@
 #include <catch.hpp>
 #include <sstream>
-
 #include "vector.hpp"
 
 TEST_CASE("creating vector")
