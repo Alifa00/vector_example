@@ -147,14 +147,13 @@ void vector_t<type>::pop_back()
 template <typename type>
 type & vector_t<type>::operator [](std::size_t index)
 {
-    at(index);
-    return elements_[index];
+	return elements_[index];
 }
+
 template <typename type>
 type vector_t<type>::operator [](std::size_t index) const
 {
-    at(index);
-    return elements_[index];
+	return elements_[index];
 }
 template <typename type>
 bool operator !=(vector_t<type> const & lhs, vector_t<type> const & rhs)
